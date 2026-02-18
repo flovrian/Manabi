@@ -44,3 +44,16 @@ I won't offer detailed instructions on how to get it up and running but the basi
 - Run the front && backend, then access the `/register` page and create an account, then login. 
 
 Although, I'm unsure if you have to disable CORS in your browser in order to send backend requests.
+
+## Credits
+[Mii Profile Picture](https://mii-unsecure.ariankordi.net/?locale.lang=en-GB)
+[GenEi Kiwami Gothic Font](https://www.freejapanesefont.com/genei-kiwami-gothic-font-download/)
+[Mogiha Pen Font](https://www.freejapanesefont.com/mogiha-pen-font-free-download/)
+[Zen Maru Gothic Font](https://fonts.google.com/specimen/Zen+Maru+Gothic)
+[Modified Dock Icons / Bell Icon](https://www.flaticon.com/)
+
+Google, Apple, and Discord logos are trademarks of their respective owners: Google, Apple Inc., and Discord Inc..
+
+
+
+
