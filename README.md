@@ -4,7 +4,7 @@
 
 ## Background
 
-At some day I've noticed how deranged and unproductive the general bubble of social media really is.
+Some day I've noticed how deranged and unproductive the general bubble of social media really is.
 I recalled that some countries e.g. China limit users to educational content while the rest of the world is fed with the worst slop imaginable.
 
 While I quickly realized that another 'social media platform', even if it was focused on studying, would just end up becoming the same mess all over again, I also realized that a platform purely for studying might bring some actual benefits.
