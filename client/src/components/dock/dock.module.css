@@ -231,8 +231,5 @@
         object-fit: contain;
         display: block;
     }
-    .manabi-dock-wrapper-start {
-        bottom: auto;
-        top: 690px; /* ← choose the exact Y position you want */
-    }
+
 }

@@ -6,14 +6,9 @@ import {useState} from "react";
 export function NoteIcon() {
 
     const navigate = useNavigate();
-    const [noteAmount, setNoteAmount] = useState(37);
-
 
     /* Grab this all via an API later on -> e.g. /api/notes*/
-
-    function addNote() {
-        setNoteAmount(noteAmount + 1);
-    }
+    const [noteAmount, setNoteAmount] = useState(37);
 
     return (
         <DockIcon
@@ -21,7 +16,7 @@ export function NoteIcon() {
             iconName='Notes'
             iconType={'notes'}
             badgeContent={noteAmount}
-            onClick={() => addNote()}
+            onClick={() => {navigate('/notes')}}
         />
     );
 }

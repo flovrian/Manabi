@@ -15,16 +15,13 @@ import AuthenticatedRoute from "./routes/AuthenticatedRotue";
 import LoadingScreen from "./components/hud/loading/LoadingScreen";
 import StartPage from "./pages/StartPage";
 import UnauthenticatedRoute from "./routes/UnauthenticatedRoute";
+import NotesPage from "./pages/NotesPage";
 
 export type Locale = keyof typeof messages;
 export const messages = {en, ja,} as const;
 
 function RootLayout() {
-    return (
-        <ManabiHudContainer>
-            <Outlet />
-        </ManabiHudContainer>
-    );
+    return (<> <Outlet/> </>);
 }
 
 export default function App() {
@@ -43,20 +40,22 @@ export default function App() {
 
                         <Route index element={<StartPage />} />
 
-                        <Route element={<UnauthenticatedRoute/>}>
+                        <Route element={<UnauthenticatedRoute />}>
                             <Route path="register" element={<RegisterPage />} />
-                        </Route>
-                        <Route element={<UnauthenticatedRoute/>}>
                             <Route path="login" element={<LoginPage />} />
                         </Route>
 
-                        <Route element={<AuthenticatedRoute />}>
-                            <Route path="space" element={<UserSpace />} />
+                        {/* HUD + Authenticated layout */}
+                        <Route element={<ManabiHudContainer  />}>
+                            <Route element={<AuthenticatedRoute />}>
+                                <Route path="space" element={<UserSpace />} />
+                                <Route path="notes" element={<NotesPage />} />
+                            </Route>
                         </Route>
 
                         <Route path="loading" element={<LoadingScreen />} />
-
                         <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+
                     </Route>
                 </Routes>
             </IntlProvider>

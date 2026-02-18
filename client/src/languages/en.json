@@ -54,6 +54,7 @@
   "loading.message.3": "You're now stuck in the matrix..",
   "loading.message.4": "Welcome to the loading screen..",
 
-  "arrival.title.friends": "Friends"
+  "arrival.title.friends": "Friends",
+  "arrival.title.notes": "notes"
 
 }

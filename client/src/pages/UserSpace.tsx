@@ -2,17 +2,6 @@ import "../styles/start_page.css";
 
 import Typewriter from 'typewriter-effect';
 
-import DockContainer, {DOCK_START_PAGE} from '../components/dock/DockContainer';
-import {PomodoroIcon} from "../components/dock/icons/PomodoroIcon";
-import {SettingsIcon} from "../components/dock/icons/SettingsIcon";
-import {LogoutIcon} from "../components/dock/icons/LogoutIcon";
-import {FriendsIcon} from "../components/dock/icons/FriendsIcon";
-import {MailIcon} from "../components/dock/icons/MailIcon";
-import {CalendarIcon} from "../components/dock/icons/CalendarIcon";
-import {NoteIcon} from "../components/dock/icons/NoteIcon";
-import UserAvatar from "../components/hud/avatar/UserAvatar";
-import ManabiTray from "../components/hud/system-tray/ManabiTray";
-
 import {useIntl} from "react-intl";
 import {useAuth, useProfileData} from "../providers/AuthProvider";
 import {useEffect, useState} from "react";
@@ -53,10 +42,6 @@ export default function UserSpace() {
 
     return (
         <div className="start-page">
-
-            <UserAvatar/>
-            <ManabiTray/>
-
             <div className="manabi-welcome-wrapper">
                 <div className="manabi-title-wrapper">
                     <span className="manabi-title-main">学び</span>
@@ -76,19 +61,6 @@ export default function UserSpace() {
                 </span>
                 </div>
             </div>
-
-            {
-                <DockContainer wrapperClass={DOCK_START_PAGE}>
-                    <NoteIcon/>
-                    <CalendarIcon/>
-                    <PomodoroIcon/>
-                    <MailIcon/>
-                    <FriendsIcon/>
-                    <SettingsIcon/>
-                    <LogoutIcon/>
-                </DockContainer>
-            }
-
         </div>
     )
 }

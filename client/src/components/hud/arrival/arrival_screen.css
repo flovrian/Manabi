@@ -3,7 +3,7 @@ body{
 }
 
 .manabi-arrival-wrapper {
-    z-index: 10;
+    z-index: 15;
     position: fixed;
 
     top: 50%;
@@ -19,6 +19,7 @@ body{
     align-items: center;
     background-color: #f4f4f4;
     animation: manabi-arrival-bg-reveal 3s forwards ease-in-out;
+    pointer-events: none;
 }
 
 .manabi-arrival-inner {
@@ -58,6 +59,10 @@ body{
 
 .friends{
     --arrival-border-color: #dfac51;
+}
+
+.notes{
+    --arrival-border-color: #48bffd;
 }
 
 .manabi-arrival-icon{
