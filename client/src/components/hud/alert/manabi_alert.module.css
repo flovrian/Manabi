@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+
+.manabi-alert-container {
+    position: fixed;
+    top: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+.manabi-alert-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-width: 15em;
+    padding: 0 15px;
+
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+
+    color: #004b63;
+    background: #fdfdfd;
+    border-radius: 20px;
+    border: 3px #68e3ee solid;
+    filter: drop-shadow(0px 3px 0 #cecece);
+
+    transform-origin: top center;
+    animation: manabi-alert-reveal 0.5s ease-out;
+
+    transition: all 0.1s ease-in-out;
+}
+
+.manabi-alert-wrapper:hover {
+    cursor: pointer;
+}
+
+.manabi-alert-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.manabi-alert-img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.manabi-alert-wrapper:hover {
+    cursor: pointer;
+    transform: scale(96%);
+}
+
+.manabi-alert-wrapper-exit {
+    animation: manabi-alert-removal 0.6s ease-out;
+    transition: transform 0.4s ease-out;
+}
+
+
+
+
+@keyframes manabi-alert-reveal {
+    0% {
+        transform:  translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10%);
+        opacity: 50;
+    }
+    100% {
+        transform:  translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes manabi-alert-removal {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform:  translateY(-150%);
+        opacity: 0;
+    }
+}
+
+
+/* Tablets (~768px) */
+@media (min-width: 530px) and (min-height: 600px) {
+    .manabi-alert-wrapper {
+        font-size: 1.6em;
+    }
+    .manabi-alert-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* Small Desktops / Laptops (1024px) */
+@media (min-width: 920px)   and (min-height: 700px) {
+
+    .manabi-alert-wrapper {
+        font-size: 1.8em;
+    }
+    .manabi-alert-img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+{
+  "authentication.login": "ログイン",
+  "authentication.logout": "ログアウト",
+
+  "user.welcome.morning.1": "おはよう、{user}。",
+  "user.welcome.morning.2": "おはよう、{user}。勉強の準備できた？",
+  "user.welcome.morning.3": "やあ、{user}。勉強しない？",
+
+  "user.welcome.afternoon.1": "こんにちは、{user}。",
+  "user.welcome.afternoon.2": "元気？{user}、勉強始めよう。",
+  "user.welcome.afternoon.3": "{user}、起きて勉強しよう。",
+
+  "user.welcome.night.1": "{user}！ちょっと遅くない？",
+  "user.welcome.night.2": "{user}、こんな遅くまで起きてるの？勉強しよう。",
+  "user.welcome.night.3": "zzz {user}、勉強する？",
+
+  "authentication.form.username.placeholder": "ユーザー名",
+  "authentication.form.email.placeholder": "メール",
+  "authentication.form.password.placeholder": "パスワード",
+
+  "authentication.form.register.error.username_invalid": "ユーザー名が無効です。",
+  "authentication.form.register.error.username_length": "ユーザー名は2〜20文字で入力してください。",
+  "authentication.form.register.error.username_duplicate": "このユーザー名は既に使用されています。",
+
+  "authentication.form.register.error.email_invalid": "メールアドレスの形式が正しくありません。",
+  "authentication.form.register.error.email_length": "メールアドレスが長すぎます。",
+  "authentication.form.register.error.email_duplicate": "このメールアドレスは既に登録されています。",
+
+  "authentication.form.register.error.password_invalid": "パスワードが無効です。",
+  "authentication.form.register.error.password_length": "パスワードが長すぎます。",
+  "authentication.form.register.error.password_strength": "パスワードは8文字以上で、英大文字・英小文字・数字・記号をそれぞれ1文字以上含める必要があります。",
+
+  "authentication.form.register.error.server": "エラーが発生しました。もう一度お試しください。",
+
+  "authentication.register.title": "レジスター",
+  "authentication.register.description": "私たちのウェブサイトに興味を持っていただき、嬉しく思います。\nまずは新しいアカウントを登録してください",
+  "authentication.register.button": "レジスター",
+  "authentication.register.already_registered": "すでにアカウントをお持ちですか？",
+
+  "authentication.login.title": "ログイン",
+  "authentication.login.description": "Manabiへようこそ！自分のスペースに戻るには、ログインが必要です。",
+  "authentication.login.button": "ログイン",
+  "authentication.login.not_registered": "まだManabiに登録していませんか？",
+
+  "authentication.form.login.invalid_credentials": "無効なメールアドレスまたはパスワードを入力しました。",
+  "authentication.form.login.oauth_required": "Googleなどのサービスで登録したため,、パスワードでのログインはできません。",
+
+  "notifications.user_message": "{user}: {message}",
+
+  "error.title": "えっ…何か問題が起きたみたいだ。",
+  "error.code": "エラーコード： ",
+  "error.unknown" : "不明なエラーが発生しました。",
+
+  "loading.message.0": "少々お待ちください..",
+  "loading.message.1": "えーっと.. 少し時間がかかります..",
+  "loading.message.2": "お待たせしてしまってごめんなさい..",
+  "loading.message.3": "あなたは今、マトリックスに閉じ込められました..",
+  "loading.message.4": "ロード画面へようこそ..",
+
+  "arrival.title.friends": "フレンズ"
+
+}

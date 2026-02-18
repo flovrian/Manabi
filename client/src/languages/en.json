@@ -1,0 +1,59 @@
+{
+  "authentication.form.username.placeholder": "Username",
+  "authentication.form.email.placeholder": "Email",
+  "authentication.form.password.placeholder": "Password",
+
+  "authentication.form.register.error.username_invalid": "Username is invalid.",
+  "authentication.form.register.error.username_length": "Username must be between 2 and 20 characters long.",
+  "authentication.form.register.error.username_duplicate": "Username already exists.",
+
+  "authentication.form.register.error.email_invalid": "Email seems to be invalid.",
+  "authentication.form.register.error.email_length": "Email is way too long.",
+  "authentication.form.register.error.email_duplicate": "Email is already registered.",
+
+  "authentication.form.register.error.password_invalid": "Password is invalid.",
+  "authentication.form.register.error.password_length": "Password is too long.",
+  "authentication.form.register.error.password_strength": "Your password needs 8+ characters, one English uppercase and lowercase letter, one digit and one special character.",
+
+  "authentication.form.register.error.server": "Something went wrong, try again.",
+
+  "authentication.register.title": "Register",
+  "authentication.register.description": "We are glad you're interested in our website.\nPlease start by registering a new account.",
+  "authentication.register.button": "Register",
+  "authentication.register.already_registered": "Already have an account?",
+
+  "authentication.login.title": "Login",
+  "authentication.login.description": "Welcome back to Manabi, in order to get back to your space you need to log in.",
+  "authentication.login.button": "Login",
+  "authentication.login.not_registered": "Not a part of Manabi yet?",
+
+  "authentication.form.login.invalid_credentials": "You've entered an invalid email or password.",
+  "authentication.form.login.oauth_required": "You can't login with a password, since you've used a service like Google as registration.",
+
+  "notifications.user_message": "{user}: {message}",
+
+  "user.welcome.morning.1": "Good morning, {user}.",
+  "user.welcome.morning.2": "Morning {user}, ready to study?",
+  "user.welcome.morning.3": "Hi {user}, wanna study?",
+
+  "user.welcome.afternoon.1": "Good afternoon, {user}.",
+  "user.welcome.afternoon.2": "What's up {user}, get studying.",
+  "user.welcome.afternoon.3": "Get up and study, {user}",
+
+  "user.welcome.night.1": "{user}! a little late, no?",
+  "user.welcome.night.2": "{user}, up so late? Let's study.",
+  "user.welcome.night.3": "Zzz {user}, wanna study?",
+
+  "error.title": "Ehh.. something went wrong.",
+  "error.code": "Error code: ",
+  "error.unknown":  "An unknown error occurred.",
+
+  "loading.message.0": "Give us just a second..",
+  "loading.message.1": "Ehh.. this takes a bit..",
+  "loading.message.2": "We're sorry for letting you wait..",
+  "loading.message.3": "You're now stuck in the matrix..",
+  "loading.message.4": "Welcome to the loading screen..",
+
+  "arrival.title.friends": "Friends"
+
+}

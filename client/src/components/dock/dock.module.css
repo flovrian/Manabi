@@ -1,0 +1,238 @@
+@import 'tailwindcss';
+
+/* Controls behavior of the global dock module */
+.manabi-dock-wrapper-global{
+    z-index: 10;
+    font-family: 'GeneiKiwami', sans-serif;
+    display: flex; /* Controls children's layout (In this case, one line.) */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Controls behavior of the start-page dock module */
+.manabi-dock-wrapper-start {
+    z-index: 10;
+    font-family: 'GeneiKiwami', sans-serif;
+    position: fixed;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Base white part */
+.manabi-dock-base {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 72px;
+
+    width: 404px;
+    min-width: 21.9em;
+    max-width: 21.9em;
+
+    padding: 0 16px;
+
+    background-color: white;
+    border-radius: 20px;
+    image-rendering: high-quality;
+    box-shadow: 0 4px 7px #dbdbdb;
+
+    animation-duration: 0.5s;
+    transform-origin: bottom;
+    animation-name: manabi-dock-reveal;
+
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    transition: all 0.2s ease;
+
+
+}
+
+.container::-webkit-scrollbar {
+    display: none;  /* Older Safari and Chromium */
+}
+
+@keyframes manabi-dock-reveal {
+    0% {
+        transform: scaleY(0);
+
+    }
+    50% {
+        transform: scaleY(1.1);
+
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.manabi-dock-icon-wrapper {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 0 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.1s ease-in-out;
+
+    flex: 0 0 auto;
+
+}
+
+
+
+.manabi-dock-icon-wrapper:hover {
+    transform: translateY(-3px);
+}
+
+.manabi-dock-icon-wrapper:hover {
+    cursor: pointer;
+}
+
+.manabi-dock-icon-img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.manabi-dock-icon-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateX(30px);
+    pointer-events: none;
+
+    font-size: 1em;
+    font-weight: bold;
+    color: #000000;
+    -webkit-text-stroke: 1px white;
+
+    transition: transform 0.2s ease;
+}
+
+.manabi-badge-pop{
+    transform: translateX(-50%) translateX(26px) scale(1.15);
+}
+
+.pomodoro-icon-text {
+    transform: translateX(-50%) translateX(16px);
+    color: #da4c4c;
+}
+.friends-icon-text {
+    color: #e1ad52;
+}
+.mails-icon-text {
+    color: #4bd852;
+}
+.calendar-icon-text {
+    transform: translateX(-50%) translateX(30px);
+    color: #4c88da;
+}
+.notes-icon-text {
+    transform: translateX(-50%) translateX(14px);
+    color: #48bffd;
+}
+
+.settings-icon-img  {
+    transition: all 0.20s ease-in;
+}
+.settings-icon-img:hover  {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+@media (hover: none) {
+    .manabi-dock-icon-wrapper:hover {
+        transform: none;
+    }
+
+    .settings-icon-img:hover {
+        transform: none;
+    }
+}
+
+
+/* Tablets (~768px) */
+@media (min-width: 520px) {
+    .manabi-dock-base {
+        min-width: 31.9em;
+        max-width: 31.9em;
+    }
+}
+
+@media (min-width: 650px) and (min-height: 900px) {
+    .manabi-dock-base {
+        min-width: 38.5em;
+        max-width: 38.5em;
+
+        height: 100px;
+
+        padding: 0 16px;
+        box-shadow: 0 4px 7px #dbdbdb;
+    }
+
+    .manabi-dock-icon-wrapper {
+        position: relative;
+        width: 73px;
+        height: 73px;
+        margin: 0 5px;
+    }
+
+    .manabi-dock-icon-img {
+        width: 55px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    .manabi-dock-icon-text {
+
+        font-size: 1.1em;
+
+    }
+}
+
+
+@media (min-width: 920px) and (min-height: 1000px) {
+    .manabi-dock-base {
+        min-width: 41.5em;
+        max-width: 45.5em;
+    }
+
+    .manabi-dock-icon-wrapper {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 0 5px;
+    }
+
+    .manabi-dock-icon-img {
+        width: 60px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+    .manabi-dock-wrapper-start {
+        bottom: auto;
+        top: 690px; /* ← choose the exact Y position you want */
+    }
+}

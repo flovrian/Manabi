@@ -1,0 +1,115 @@
+.manabi-loading-wrapper {
+    z-index: 4;
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 20em;
+    max-width: 920px;
+    height: 20em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.manabi-loading-inner {
+    width: 20em;
+    height: 20em;
+    animation: manabi-loading-reveal 0.4s ease-in-out;
+    transform-origin: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.manabi-loading-bg {
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 10px #dbdbdb;
+    border-radius: 20px;
+}
+.manabi-loading-text {
+    position: absolute;
+    left: 50%;
+    width: 90%;
+    top: 90px;
+    transform: translateX(-50%);
+    text-align: center;
+
+    font-weight: bold;
+    font-family: 'Zen Maru Gothic Medium', sans-serif;
+    font-size: 1.3rem;
+    color: #004b63;
+
+    white-space: normal;
+
+    transition: font-size 0.2s ease-in-out;
+}
+
+.manabi-loading-loader-wrapper{
+    position: absolute;
+    bottom: 4em;
+    left: 50%;
+    transform: translate(-50%);
+    transition:  all 0.1s ease-in-out;
+    transform-origin: center;
+}
+
+.manabi-loader {
+    display: grid;
+    grid-template-columns: repeat(3, 16px);
+    grid-template-rows: repeat(3, 16px);
+    gap: 6px;
+}
+
+.manabi-loader span {
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border-radius: 4px;
+}
+
+.manabi-loader span:not(.manabi-loader-center) { animation: contrail 0.8s ease-in-out infinite; }
+.manabi-loader span:nth-child(1) { animation-delay: 0s; }
+.manabi-loader span:nth-child(2) { animation-delay: .1s; }
+.manabi-loader span:nth-child(3) { animation-delay: .2s; }
+.manabi-loader span:nth-child(6) { animation-delay: .3s; }
+.manabi-loader span:nth-child(9) { animation-delay: .4s; }
+.manabi-loader span:nth-child(8) { animation-delay: .5s; }
+.manabi-loader span:nth-child(7) { animation-delay: .6s; }
+.manabi-loader span:nth-child(4) { animation-delay: .7s; }
+
+@keyframes contrail {
+    0%   { background: #67e1ec; opacity: 1; }
+    25%  { background: #67e1ec; opacity: 1; }
+    100% { background: #bfc5c8; opacity: 0.4; }
+}
+
+@keyframes manabi-loading-reveal {
+    0%   { transform: scale(0); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+
+@media (min-width: 668px)  {
+    .manabi-loading-inner{ width: 30em; height: 30em }
+    .manabi-loading-wrapper{ width: 30em; height: 30em }
+    .manabi-loading-text { top: 160px; font-size: 1.6rem }
+    .manabi-loading-loader-wrapper{ transform-origin: center; transform: translateX(-50%) scale(1.5); bottom: 6em; }
+}
+
+@media (min-width: 920px) {
+    .manabi-loading-wrapper{ width: 30em; height: 30em }
+    .manabi-loading-inner{ width: 30em; height: 30em }
+    .manabi-loading-text { top: 170px; font-size: 1.7rem }
+    .manabi-loading-loader-wrapper{ transform-origin: center; transform: translateX(-50%) scale(1.5); bottom: 6em; }
+}
+
+@media (min-width: 1280px) {
+
+}

@@ -1,0 +1,137 @@
+@import 'tailwindcss';
+
+.manabi-tray-wrapper {
+    z-index: 10;
+    position: absolute;
+
+    font-family: 'GeneiKiwami', sans-serif;
+    font-size: 1em;
+
+    align-items: center;
+    display: flex;
+
+    top: 3.5em;
+    right: 15px;
+
+    width: fit-content;
+    flex-direction: row;
+    justify-content: center;
+
+    transform-origin: left;
+    color: #004b63;
+    animation-name: manabi-tray-reveal;
+    animation-duration: 0.5s;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.manabi-tray-date-wrapper{
+    display: none;
+}
+
+@keyframes manabi-tray-reveal {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10%);
+        opacity: 50;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.manabi-tray-notification-wrapper {
+    position: relative;
+    display: flex;
+    margin: 0 10px;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+.manabi-tray-notification-wrapper:active {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.manabi-tray-notification-img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.1s ease-in-out;
+    transform-origin: top;
+}
+
+.manabi-tray-notification-img:hover {
+    cursor: pointer;
+    animation: manabi-bell-ring 0.5s ease-in-out;
+}
+.manabi-tray-notification-circle {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 3px solid #f9f9f9;
+    background-color: #004a62;
+}
+
+
+
+@keyframes manabi-bell-ring {
+    0%   { transform: rotate(0deg); }
+    20%  { transform: rotate(12deg); }
+    40%  { transform: rotate(-12deg); }
+    60%  { transform: rotate(8deg); }
+    80%  { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@media (min-width: 375px) and (orientation: landscape) {
+    .manabi-tray-wrapper{
+        font-size: 1em;
+        top: 3.8em;
+        right: 15px;
+    }
+    .manabi-tray-date-wrapper{
+        display: flex;
+    }
+    .manabi-tray-notification-img{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (min-width: 600px) {
+    .manabi-tray-wrapper{
+        font-size: 1.2em;
+        top: 3em;
+        right: 15px;
+    }
+    .manabi-tray-date-wrapper{
+        display: flex;
+    }
+    .manabi-tray-notification-img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+@media (min-width: 920px) {
+    .manabi-tray-wrapper{
+        font-size: 1.5em;
+        top: 2.3em;
+        right: 15px;
+    }
+    .manabi-tray-date-wrapper{
+        display: flex;
+    }
+    .manabi-tray-notification-img{
+        width: 30px;
+        height: 30px;
+    }
+}

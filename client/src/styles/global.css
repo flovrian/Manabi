@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+/* Title font, either re-usable or only used for logo purposes */
+
+@font-face {
+  font-family: 'ZenMaru';
+  src: url('/fonts/zen-maru.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneiKiwami';
+  src: url('/fonts/genei-kiwami-go.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MogihaPen';
+  src: url('/fonts/mogiha-pen.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove disgusting styling applied by browsers */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill { transition: all 0s 50000s;}
+

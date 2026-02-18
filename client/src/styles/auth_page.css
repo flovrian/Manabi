@@ -1,0 +1,447 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    background-size: 70px 70px;
+    background-color: #fbfbfb;
+    background-image: linear-gradient(to right, #e3e3e3 2px, transparent 2px), linear-gradient(to bottom, #e3e3e3 2px, transparent 2px);
+}
+
+.manabi-auth-form-wrapper {
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    max-width: 920px;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.manabi-auth-form-inner-wrapper{
+    position: relative;
+}
+
+/* Form styles */
+.manabi-auth-form-base {
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 10px #dbdbdb;
+    padding: 2rem;
+
+}
+
+.manabi-auth-form-title {
+    z-index: 3;
+    margin-top: 20%;
+    font-family: 'GeneiKiwami', sans-serif;
+    font-size: 2.5rem;
+    color: #004b63;
+    animation: manabi-form-reveal 0.5s ease-in-out;
+}
+
+.manabi-auth-form-description {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    z-index: 3;
+    font-family: 'Zen Maru Gothic Medium', sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #b3bfc5;
+    margin: 0.6em auto;
+    animation: manabi-form-reveal 0.5s ease-in-out;
+}
+
+.manabi-auth-form-field-wrapper {
+    display: block;
+    animation: manabi-form-reveal 0.5s ease-in-out;
+}
+
+.manabi-auth-form-field {
+    width: 95%;
+    max-width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 3px solid #c0c0c0;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #b1b1b1;
+    font-weight: bolder;
+    box-shadow: 0 4px 0 #e6e6e6;
+    background-color: #ffff;
+}
+
+.manabi-auth-form-field:focus {
+    outline: #67e1ec solid 2px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    background-color: #fff;
+    color: #b1b1b1;
+    -webkit-text-fill-color: #b1b1b1 !important;
+    font-weight: bolder;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.manabi-auth-form-field-error {
+    border: 3px solid #e85b5b !important;
+    box-shadow: 0 4px 0 #ffcdcd;
+}
+
+.manabi-auth-form-error-text {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 0.8em;
+    color: #ea5c5c;
+    font-weight: bold;
+    display: block;
+    line-height: 0.8em;
+    text-align: center;
+    align-self: center;
+    animation: manabi-form-reveal 0.5s ease-in-out;
+    overflow-wrap: break-word;
+}
+
+.manabi-auth-button {
+    font-family: 'GeneiKiwami', sans-serif;
+    color: #004a62;
+    font-size: 1rem;
+    width: 70%;
+    max-width: 60%;
+    padding: 0.5em 1em;
+
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #e6e6e6;
+
+    outline-style: solid;
+    outline-color: #67e1ec;
+
+    border-radius: 20px;
+    transition: background-color 0.3s;
+
+    animation: manabi-button-reveal 0.5s ease-in-out;
+
+    background: #fdfdfd;
+    margin-bottom: 10px;
+
+}
+
+.manabi-auth-o-auth-buttons {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+
+    left: 50%;
+    transform: translateX(-50%);
+    image-rendering: high-quality;
+
+    animation-duration: 0.5s;
+    transform-origin: bottom;
+
+    justify-content: center;
+    gap: 25px;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.manabi-auth-o-auth-button {
+    font-family: 'GeneiKiwami', sans-serif;
+    color: #6f6f6f;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    outline-style: solid;
+    outline-color: #67e1ec;
+    box-shadow: 0 6px 0 #e6e6e6;
+
+    animation: manabi-button-reveal 0.2s ease-in-out;
+    transition: background-color 0.1s;
+
+    background: #fdfdfd;
+}
+.manabi-auth-o-auth-button:hover,
+.manabi-auth-button:hover {
+    background-color: rgb(245, 245, 245);
+    color: #003647;
+}
+.manabi-auth-o-auth-button:active,
+.manabi-auth-button:active {
+    box-shadow: none;
+    transform: translateY(1px);
+}
+
+.manabi-already-registered {
+    font-family: 'Zen Maru Gothic Medium', sans-serif;
+    font-size: 1em;
+    color: #b3bfc5;
+    cursor: pointer;
+    text-decoration: underline;
+    animation: manabi-form-reveal 0.5s ease-in-out;
+}
+
+
+.manabi-mobile-shape-wrapper{
+    z-index: 4;
+    position: fixed;
+}
+.manabi-shape-one {
+    position: fixed;
+    right: -160px;
+    top:-140px;
+    width: 320px;
+}
+.manabi-shape-two {
+    position: fixed;
+    left: -80px;
+    bottom: -50px;
+    width: 200px;
+}
+
+.manabi-desktop-shape-wrapper{
+    z-index: 2;
+    position: fixed;
+}
+
+.manabi-d-shape-one{
+    position: fixed;
+    width: 600px;
+    top: -170px;
+    right: -290px;
+    animation: manabi-float 5s ease-in-out infinite;
+}
+.manabi-d-shape-two{
+    position: fixed;
+    width: 500px;
+    bottom: -160px;
+    left: 700px;
+    animation: manabi-float 5s ease-in-out infinite;
+}
+
+.manabi-d-shape-three{
+    position: fixed;
+    width: 50em;
+    bottom: 10%;
+    right: clamp(100px, 5%, 10%);
+    animation: manabi-float 5s ease-in-out infinite;
+}
+
+.manabi-d-shape-four{
+    position: fixed;
+    width: 45em;
+    bottom: 40%;
+    right: clamp(35%, 5%, 10%);
+    animation: manabi-float 5s ease-in-out infinite;
+}
+
+
+@keyframes manabi-float {
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-30px); }
+    100% { transform: translatey(0px); }
+}
+
+@keyframes manabi-button-reveal {
+    0% { transform: scale(0%); }
+    50% { transform: scale(110%); }
+    100% { transform: scale(100%); }
+}
+
+@keyframes manabi-form-reveal {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10%);
+        opacity: 50;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+/* Base: Small portrait phones (~375px) */
+@media (min-width: 375px) {}
+@media (min-width: 375px) and (orientation: landscape) {
+    .manabi-desktop-shape-wrapper{
+        display: none;
+    }
+    .manabi-auth-form-title{
+        margin-top: 0;
+        font-size: 1.7rem;
+    }
+    .manabi-auth-form-description {
+        z-index: 3;
+        font-size: 0.7rem;
+    }
+    .manabi-auth-form-field{
+        width: 60%;
+        padding: 5px;
+        margin: 4px 0;
+        border: 3px solid #c0c0c0;
+        border-radius: 20px;
+        font-size: 0.6rem;
+    }
+    .manabi-auth-button {
+        font-size: 0.75rem;
+        width: 50%;
+        padding: 0.4em 1em;
+        margin-top: 10px;
+        cursor: pointer;
+        outline-style: solid;
+        outline-color: #67e1ec;
+        border-radius: 20px;
+        margin-bottom: 0;
+    }
+    .manabi-auth-o-auth-button {
+        width: 27px;
+        height: 27px;
+        padding: 5px;
+        border-radius: 20px;
+        background-color: #fdfdfd;
+        margin-bottom: 1px;
+    }
+    .manabi-already-registered{
+        font-size: 0.7rem;
+    }
+}
+
+/* Medium phones & large mobiles (425px/480px) */
+@media (min-width: 425px) {}
+@media (min-width: 425px) and (orientation: landscape) {
+    .manabi-auth-form-title{ margin-top: 5%; }
+    .manabi-auth-form-field{ width: 70%; }
+    .manabi-auth-o-auth-button { margin-bottom: 6px; }
+}
+
+/* Tablets (~768px) */
+@media (min-width: 600px) {
+    .manabi-desktop-shape-wrapper{
+        display: flex;
+    }
+    .manabi-auth-form-title {
+        font-size: 3rem;
+    }
+    .manabi-auth-form-description {
+        z-index: 3;
+        font-size: 1.1rem;
+    }
+    .manabi-auth-form-field{
+        width: 65%;
+        font-size: 1.1rem;
+    }
+    .manabi-auth-button {
+        font-size: 1.2rem;
+        width: 40%;
+        padding: 0.5em 1em;
+        margin-top: 10px;
+        margin-bottom: 12px;
+    }
+    .manabi-auth-o-auth-button {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 12px;
+    }
+    .manabi-already-registered { font-size: 1.1em; }
+    .manabi-auth-form-error-text {
+        font-size: 0.8em;
+        line-height: 0.8em;
+    }
+}
+@media (min-width: 425px) and (orientation: landscape) {
+    .manabi-auth-form-title{
+        margin-top: 0;
+        font-size: 1.7rem
+    ;}
+    .manabi-auth-form-description{ font-size: 0.8rem; }
+    .manabi-auth-form-field{
+        width: 65%;
+        padding: 0.5em 1em;
+        font-size: 0.78rem;
+    }
+    .manabi-auth-button {
+        font-size: 0.78rem;
+        width: 40%;
+        padding: 0.5em 1em;
+        margin-top: 10px;
+        border-radius: 20px;
+        margin-bottom: 0;
+    }
+    .manabi-auth-o-auth-button {
+        margin-bottom: 6px;
+        width: 27px;
+        height: 27px;
+    }
+
+}
+
+/* Small Desktops / Laptops (1024px) */
+@media (min-width: 920px) {
+    .manabi-mobile-shape-wrapper{ display: none; }
+    .manabi-auth-form-title{
+        margin-top: 15%;
+        font-size: 3.8rem;
+    }
+    .manabi-auth-form-description{
+        font-size: 1.5rem;
+    }
+    .manabi-auth-form-field{
+        width: 80%;
+        padding: 15px;
+        margin: 12px 0;
+        border: 3px solid #c0c0c0;
+        border-radius: 20px;
+        font-size: 1.5rem;
+    }
+    .manabi-auth-button{
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .manabi-auth-o-auth-button {
+        width: 62px;
+        height: 62px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 20px;
+
+        background-color: #fdfdfd;
+        box-shadow: 0 6px 0 #d7d7d7;
+
+        margin-bottom: 16px;
+    }
+    .manabi-already-registered{
+        font-size: 1.3rem;
+    }
+    .manabi-auth-form-error-text {
+        font-size: 1.3em;
+        line-height: 1.3em;
+    }
+
+}
+
+/* Large Desktops / Widescreens (1280px+) */
+@media (min-width: 1280px) {
+
+}

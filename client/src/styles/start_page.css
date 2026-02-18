@@ -1,0 +1,163 @@
+.manabi-title-wrapper {
+    font-family: 'GeneiKiwami', sans-serif;
+    font-size: 10rem;
+    white-space: nowrap;
+    animation: manabi-title-reveal 0.5s;
+
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: center;
+    transition: all 0.4s ease;
+}
+@keyframes manabi-title-reveal {
+    0% { font-size: 0; }
+    50% { font-size: 10.5em; }
+    100% { font-size: 10em; }
+}
+
+/* Outline layers */
+.manabi-title-wrapper, .manabi-title-outline,
+.manabi-title-wrapper, .manabi-title-outline-second {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Second layer outline */
+.manabi-title-outline {
+    z-index: 1;
+    color: transparent;
+    text-shadow: 4px 4px #b5f0f5;
+    top: 0.05em;
+}
+
+/*Top layer text*/
+.manabi-title-main {
+    z-index: 2;
+    color: #68e3ee;
+    -webkit-text-stroke: 3px #ffffff;
+    text-shadow: 4px 4px #ffffff;
+}
+
+/* Welcome Text */
+.manabi-welcome-text-wrapper {
+    position: static;
+}
+
+.manabi-welcome-text {
+    z-index: 3;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+    left: 50%;
+    top: 15.6em;
+    max-width: 80%;
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    font-family: 'GeneiKiwami', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px #004a62;
+    color: #ffffff;
+    text-shadow: 2px 2px #67e1ec;
+    overflow: hidden;
+
+    transition: all 0.4s ease;
+}
+
+/* Base: Small portrait phones (~375px) */
+@media (min-width: 375px) {}
+@media (min-width: 375px) and (orientation: landscape)  {
+    .manabi-title-wrapper{
+        top: 90px;
+        font-size: 7em;
+    }
+    @keyframes manabi-title-reveal {
+        0% { font-size: 0; }
+        50% { font-size: 7.5em; }
+        100% { font-size: 7em; }
+    }
+    .manabi-welcome-text{
+        top: 18em;
+        font-size: 0.8rem;
+    }
+
+}
+
+/* Medium phones & large mobiles (425px/480px) */
+@media (min-width: 425px) {}
+@media (min-width: 425px) and (orientation: landscape) and (min-height: 425px ) {
+    .manabi-title-wrapper{
+        top: 90px;
+        font-size: 9em;
+    }
+    @keyframes manabi-title-reveal {
+        0% { font-size: 0; }
+        50% { font-size: 9.5em; }
+        100% { font-size: 9em; }
+    }
+    .manabi-welcome-text{
+        top: 15.4em;
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablets (~768px) */
+@media (min-width: 530px) and (min-height: 720px) {
+    .manabi-title-wrapper {
+        top: 200px;
+        font-size: 15em;
+    }
+
+    @keyframes manabi-title-reveal {
+        0% {
+            font-size: 0;
+        }
+        50% {
+            font-size: 15.5em;
+        }
+        100% {
+            font-size: 15em;
+        }
+    }
+    .manabi-welcome-text {
+        top: 500px;
+        max-width: 14.5em;
+        font-size: 2.2rem;
+        -webkit-text-stroke: 1px #004a62;
+        text-shadow: 3px 3px #67e1ec;
+    }
+
+}
+
+
+
+/* Small Desktops / Laptops (1024px) */
+@media (min-width: 920px)   and (min-height: 800px) {
+    .manabi-title-wrapper{
+        top: 200px;
+        font-size: 18em;
+    }
+    @keyframes manabi-title-reveal {
+        0% { font-size: 0; }
+        50% { font-size: 18.5em; }
+        100% { font-size: 18em; }
+    }
+    .manabi-welcome-text{
+        top: 13.7em;
+        max-width: 90%;
+        font-size: 2.6rem;
+
+        -webkit-text-stroke: 1px #004a62;
+        text-shadow: 3px 3px #67e1ec;
+    }
+}
+
+
+
+
