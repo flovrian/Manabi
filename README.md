@@ -1,6 +1,3 @@
-# Manabi
-A multilingual Study App Concept 
-
 ![User Space](https://i.ibb.co/pVJZn1Z/manabi-space-opt.png)
 
 ## Background
