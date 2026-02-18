@@ -1,7 +1,6 @@
 # Manabi
 
 ![User Space](https://i.ibb.co/pVJZn1Z/manabi-space-opt.png)
-![Login Page](https://i.ibb.co/NgwtYZXX/manabi-login-opt.png)
 
 ## Background
 
@@ -26,6 +25,8 @@ It works with multiple sessions that are being cached inside Redis but also the 
 For user IDs it's using a snowflake, just like Twitter and Discord do.
 
 Like mentioned, it supports the Japanese but also English language by using INTL.
+
+![Login Page](https://i.ibb.co/NgwtYZXX/manabi-login-opt.png)
 
 ## Visuals
 
