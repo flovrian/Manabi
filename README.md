@@ -27,7 +27,7 @@ Like mentioned, it supports the Japanese but also English language by using INTL
 ## Visuals
 
 The visuals are inspired from Nintendo's 3DS, Switch and Wii; it offers beautiful UI elements while keeping its simplicity.
-Whenever you switch to different website path (currently only the friends path) it will play a short loading screen, also inspired from the 3DS.
+Whenever you switch to a different website path (currently only the friends path) it will overlay a short loading screen, also inspired by the 3DS.
 Besides that it has small animations and loading animations while querying the API.
 
 ## Installation
